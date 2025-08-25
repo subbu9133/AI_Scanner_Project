@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Universal AI Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered assistant that appears on every webpage to help analyze forms and answer questions",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["universal-assistant.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Universal AI Assistant"
+  }
+}

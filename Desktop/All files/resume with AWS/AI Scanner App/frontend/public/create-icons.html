@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Extension Icons</title>
+</head>
+<body>
+    <h2>Creating Icons for Browser Extension...</h2>
+    <canvas id="canvas16" width="16" height="16" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <canvas id="canvas48" width="48" height="48" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <canvas id="canvas128" width="128" height="128" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    
+    <div>
+        <button onclick="downloadIcons()">Download Icons</button>
+    </div>
+
+    <script>
+        function drawIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#3b82f6');
+            gradient.addColorStop(1, '#8b5cf6');
+            
+            // Draw background circle
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2 - 1, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Draw brain/AI icon
+            ctx.fillStyle = 'white';
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = Math.max(1, size/16);
+            
+            // Simple brain representation
+            const centerX = size/2;
+            const centerY = size/2;
+            const radius = size/4;
+            
+            // Draw main circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY - size/8, radius, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Draw smaller circles for brain lobes
+            ctx.beginPath();
+            ctx.arc(centerX - size/6, centerY, radius/2, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(centerX + size/6, centerY, radius/2, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Add some lines for brain texture
+            ctx.beginPath();
+            ctx.moveTo(centerX - radius/2, centerY - size/8);
+            ctx.lineTo(centerX + radius/2, centerY - size/8);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY - size/8 - radius/2);
+            ctx.lineTo(centerX, centerY - size/8 + radius/2);
+            ctx.stroke();
+        }
+
+        // Draw icons
+        drawIcon(document.getElementById('canvas16'), 16);
+        drawIcon(document.getElementById('canvas48'), 48);
+        drawIcon(document.getElementById('canvas128'), 128);
+
+        function downloadIcons() {
+            // Download 16x16 icon
+            const canvas16 = document.getElementById('canvas16');
+            const link16 = document.createElement('a');
+            link16.download = 'icon16.png';
+            link16.href = canvas16.toDataURL();
+            link16.click();
+
+            // Download 48x48 icon
+            setTimeout(() => {
+                const canvas48 = document.getElementById('canvas48');
+                const link48 = document.createElement('a');
+                link48.download = 'icon48.png';
+                link48.href = canvas48.toDataURL();
+                link48.click();
+            }, 500);
+
+            // Download 128x128 icon
+            setTimeout(() => {
+                const canvas128 = document.getElementById('canvas128');
+                const link128 = document.createElement('a');
+                link128.download = 'icon128.png';
+                link128.href = canvas128.toDataURL();
+                link128.click();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

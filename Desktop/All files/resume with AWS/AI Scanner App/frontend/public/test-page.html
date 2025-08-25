@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page - Universal AI Assistant Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .form-container {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+        .radio-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+        .submit-btn {
+            background: #007cba;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .header {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .demo-note {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #007cba;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Loan Application Form</h1>
+        <p>Complete this form to apply for a personal loan</p>
+    </div>
+
+    <div class="demo-note">
+        <strong>Universal AI Assistant Demo:</strong> Look for the floating AI button in the bottom-right corner! 
+        Click it and then click "Scan Page" to see how it analyzes this form and provides helpful explanations.
+    </div>
+
+    <div class="form-container">
+        <form>
+            <h2>Personal Information</h2>
+            
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+
+            <div class="form-group">
+                <label for="birthDate">Date of Birth</label>
+                <input type="date" id="birthDate" name="birthDate">
+            </div>
+
+            <div class="form-group">
+                <label>Marital Status</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="maritalStatus" value="single"> Single</label>
+                    <label><input type="radio" name="maritalStatus" value="married"> Married</label>
+                    <label><input type="radio" name="maritalStatus" value="divorced"> Divorced</label>
+                    <label><input type="radio" name="maritalStatus" value="other"> Other</label>
+                </div>
+            </div>
+
+            <h2>Loan Information</h2>
+
+            <div class="form-group">
+                <label for="loanAmount">Desired Loan Amount</label>
+                <input type="number" id="loanAmount" name="loanAmount" placeholder="25000">
+            </div>
+
+            <div class="form-group">
+                <label>Loan Purpose</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="loanPurpose" value="business"> Business Launching</label>
+                    <label><input type="radio" name="loanPurpose" value="house"> House Buying</label>
+                    <label><input type="radio" name="loanPurpose" value="home-improvement"> Home Improvement</label>
+                    <label><input type="radio" name="loanPurpose" value="investment"> Investment</label>
+                    <label><input type="radio" name="loanPurpose" value="education"> Education</label>
+                    <label><input type="radio" name="loanPurpose" value="other"> Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="otherPurpose">If Other, Please Specify</label>
+                <input type="text" id="otherPurpose" name="otherPurpose" placeholder="Please describe your loan purpose">
+            </div>
+
+            <h2>Employment Information</h2>
+
+            <div class="form-group">
+                <label for="employer">Current Employer</label>
+                <input type="text" id="employer" name="employer" placeholder="Company name">
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Job Title</label>
+                <input type="text" id="occupation" name="occupation" placeholder="Your job title">
+            </div>
+
+            <div class="form-group">
+                <label for="annualIncome">Annual Income</label>
+                <input type="number" id="annualIncome" name="annualIncome" placeholder="75000">
+            </div>
+
+            <div class="form-group">
+                <label>Years at Current Job</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="jobYears" value="0-1"> 0-1 Year</label>
+                    <label><input type="radio" name="jobYears" value="1-2"> 1-2 Years</label>
+                    <label><input type="radio" name="jobYears" value="3-4"> 3-4 Years</label>
+                    <label><input type="radio" name="jobYears" value="5+"> 5+ Years</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="monthlyExpenses">Monthly Rent/Mortgage</label>
+                <input type="number" id="monthlyExpenses" name="monthlyExpenses" placeholder="1500">
+            </div>
+
+            <h2>Additional Information</h2>
+
+            <div class="form-group">
+                <label for="comments">Comments or Questions</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any additional information you'd like to share..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the terms and conditions and authorize credit check
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="privacy" required>
+                    I acknowledge the privacy policy and consent to data processing
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Loan Application</button>
+        </form>
+    </div>
+
+    <!-- Load Universal AI Assistant -->
+    <script src="universal-assistant.js"></script>
+</body>
+</html>

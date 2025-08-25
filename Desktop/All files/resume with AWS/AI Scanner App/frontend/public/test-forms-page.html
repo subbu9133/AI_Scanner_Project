@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Forms Page - Universal AI Assistant</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f8fafc;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #1f2937;
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #374151;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .code-section {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .code-section pre {
+            margin: 0;
+            font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+        }
+        .alert {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Page for Universal AI Assistant</h1>
+        <p>This page contains various forms and code examples to test your Universal AI Assistant's scanning and analysis capabilities.</p>
+        
+        <div class="alert">
+            <strong>📌 How to Test the New Selection Feature:</strong>
+            <ol>
+                <li>Click the floating AI button (bottom-right)</li>
+                <li>Click "📐 Select & Scan" to start selection mode</li>
+                <li>Drag to select any area on this page (forms, code, text)</li>
+                <li>Click "🔍 Analyze Selection" to analyze only that area</li>
+                <li>Ask questions about the selected content!</li>
+            </ol>
+            <strong>✨ New Feature:</strong> Instead of scanning the entire page, you can now select specific areas like individual forms, code blocks, or text sections for targeted analysis!
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>📋 Sample Registration Form</h2>
+        <div class="form-section">
+            <h3>Personal Information</h3>
+            <form>
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name like John" required>
+                
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name like Smith" required>
+                
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email like john@example.com" required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Use format: (555) 123-4567">
+                
+                <label for="birthDate">Date of Birth</label>
+                <input type="date" id="birthDate" name="birthDate">
+                
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="">Choose your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h3>Loan Application</h3>
+            <form>
+                <label for="loanType">Loan Type *</label>
+                <select id="loanType" name="loanType" required>
+                    <option value="">Select loan type</option>
+                    <option value="home">Home Loan - For purchasing or refinancing your house</option>
+                    <option value="personal">Personal Loan - For personal expenses, no collateral required</option>
+                    <option value="auto">Auto Loan - For buying a new or used vehicle</option>
+                    <option value="business">Business Loan - For business expansion or startup funding</option>
+                </select>
+                
+                <label for="loanAmount">Desired Loan Amount *</label>
+                <input type="number" id="loanAmount" name="loanAmount" placeholder="Enter amount in dollars (e.g., 50000)" min="1000" required>
+                
+                <label for="income">Annual Income *</label>
+                <input type="number" id="income" name="income" placeholder="Enter your yearly income before taxes" required>
+                
+                <label for="employment">Employment Status *</label>
+                <select id="employment" name="employment" required>
+                    <option value="">Select employment status</option>
+                    <option value="full-time">Full-time Employee - Working 40+ hours per week</option>
+                    <option value="part-time">Part-time Employee - Working less than 40 hours per week</option>
+                    <option value="self-employed">Self-employed - Running your own business</option>
+                    <option value="unemployed">Unemployed - Currently not working</option>
+                    <option value="retired">Retired - No longer working</option>
+                </select>
+                
+                <label for="purpose">Loan Purpose</label>
+                <textarea id="purpose" name="purpose" rows="3" placeholder="Briefly explain what you'll use this loan for..."></textarea>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>💻 Code Examples</h2>
+        <p>The AI assistant can also analyze and explain code snippets:</p>
+        
+        <h3>Java Exception Handling Example</h3>
+        <div class="code-section">
+            <pre><code>public class ExceptionTest {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Division by zero error!");
+        } finally {
+            System.out.println("Finally block executed");
+        }
+    }
+}</code></pre>
+        </div>
+
+        <h3>JavaScript Array Methods</h3>
+        <div class="code-section">
+            <pre><code>const numbers = [1, 2, 3, 4, 5];
+
+// Filter even numbers
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // [2, 4]
+
+// Map to square each number
+const squares = numbers.map(num => num * num);
+console.log(squares); // [1, 4, 9, 16, 25]
+
+// Reduce to sum all numbers
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 15</code></pre>
+        </div>
+
+        <h3>CSS Flexbox Layout</h3>
+        <div class="code-section">
+            <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    flex: 1 1 300px;
+    min-height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>❓ Test Questions</h2>
+        <p>Try these targeted selection tests:</p>
+        
+        <h3>🎯 Selection Test Scenarios:</h3>
+        <ul>
+            <li><strong>Select only the "Personal Information" form:</strong> Then ask "What fields are required here?"</li>
+            <li><strong>Select only the "Loan Application" form:</strong> Then ask "Explain the loan types available"</li>
+            <li><strong>Select only the Java code block:</strong> Then ask "What will be the output of this code?"</li>
+            <li><strong>Select only the JavaScript code:</strong> Then ask "How does the filter method work?"</li>
+            <li><strong>Select only the CSS code:</strong> Then ask "What does this flexbox code do?"</li>
+            <li><strong>Select just the phone number field:</strong> Then ask "What format should I use?"</li>
+            <li><strong>Select the employment dropdown:</strong> Then ask "What's the difference between these options?"</li>
+        </ul>
+        
+        <h3>💡 Advanced Tests:</h3>
+        <ul>
+            <li>Select multiple form fields at once and ask for explanations</li>
+            <li>Select mixed content (text + code) and ask about both</li>
+            <li>Select very small areas to test precision</li>
+            <li>Try selecting across different containers</li>
+        </ul>
+    </div>
+
+    <!-- Universal AI Assistant will be injected here -->
+    <script src="universal-assistant.js"></script>
+</body>
+</html>
